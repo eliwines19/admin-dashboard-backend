@@ -1,0 +1,1 @@
+const SaleSchema = require('../models/SaleModel')

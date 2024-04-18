@@ -1,9 +1,9 @@
+const { addEmployee, getEmployees, deleteEmployee } = require('../controllers/employee')
+
 const router = require('express').Router()
 
-
-
-router.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+router.post('/employee/new', addEmployee)
+    .get('/employees', getEmployees)
+    .delete('/employee/delete/:id', deleteEmployee)
 
 module.exports = router
